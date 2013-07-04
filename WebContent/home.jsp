@@ -17,13 +17,13 @@
 .left {
 	width: 300px;
 	position: absolute;
-	left: 15%;
+	left: 10%;
 	top: 30px;
 	text-align: right;
 }
 
 .menu {
-	margin-bottom: 10px;
+	margin-bottom: 30px;
 	font-size: 14px;
 	font-weight: normal;
 	text-align: right;
