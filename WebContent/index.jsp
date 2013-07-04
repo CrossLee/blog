@@ -12,16 +12,24 @@ body {
 	min-height: 100%;
 }
 
-#right {
+#content {
 	width: 700px;
 	position: absolute;
 	left: 40%;
 	top: 60px;
+	min-height: 700px;
 	
 	background: none repeat scroll 0 0 white;
     box-shadow: 0 0 10px rgba(200, 200, 200, 0.8);
     margin: 0 0 1.625em;
     padding: 0 0 1.625em;
+}
+
+#right{
+	position: relative;
+	left: 30px;
+	top: 60px;
+	
 }
 </style>
 <title>CROSS'S WEBSITE</title>
@@ -29,16 +37,7 @@ body {
 <body>
 	<div id="content">
 		<div id="right">
-			222fgasdfasdgasdgasdgasdfasdgkjasdlfhlk fasdfasdf asdf as dfa sd fa
-			sdf as df asd fas df asd fashdglkahsdfjklha sdgjhaklsdf ashdgjkah
-			sdkfjhaslkdfh laksjdhfklasdf asdhfkjhas kdjfhalsdfh<br /> 222<br />
-			222<br /> 222<br /> 222<br /> 222<br /> 222<br /> 222<br /> 222<br />
-			222<br /> 222<br /> 222<br /> 222<br /> 222<br /> 222<br /> 222<br />
-			222<br /> 222<br /> 222<br /> 222<br /> 222<br /> 222<br /> 222<br />
-			222<br /> 222<br /> 222<br /> 222<br /> 222<br /> 222<br /> 222<br />
-			222<br /> 222<br /> 222<br /> 222<br /> 222<br /> 222<br />
-			222<br /> 222<br /> 222<br /> 222<br /> 222<br /> 222<br />
-			222<br /> 222<br /> 222<br /> 222<br /> 222<br /> 222<br />
+			It is coming soon..
 		</div>
 	</div>
 </body>
