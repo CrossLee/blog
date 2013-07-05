@@ -52,7 +52,7 @@ body {
 
 .profile_items {
 	position: relative;
-	width: 360px;
+	width: 420px;
 	margin-bottom: 40px;
 }
 
@@ -88,7 +88,7 @@ body {
 	</div>
 	
 	<div id="about" class="about">
-		<img style="position:absolute; ;top: 0px;right: 0px;" width="300px" alt="Cross Lee" src="./image/user.png">
+		<img style="position:absolute; ;top: 0px;right: 0px;" width="240px" height="300px;" alt="Cross Lee" src="./image/me.png">
 		<div class="profile_items">
 			<font>Who Am I</font>
 			<hr/>
