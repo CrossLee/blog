@@ -79,7 +79,7 @@ Home.hideAll = function(){
 };
 
 Home.home = function(){
-	window.location.href = "./home.jsp";
+	window.location.href = "http://cross.withiter.com";
 };
 Home.photos = function(){
 	alert("Under Construction, coming soon..");
