@@ -78,6 +78,15 @@ body {
 		</div>
 	</div>
 	
+	<div id="weibo" class="about">
+		<div class="profile_items_long">
+			<font>Sina Weibo ： <a href="http://weibo.com/withiter" target="_blank"><img class="link_image" alt="GitHub" src="./image/weibo.png"></a></font>
+			<hr/>
+			<font>Twitter ： <a href="#" target="_blank"><img class="link_image" alt="GitHub" src="./image/twitter.png"></a></font>
+			<br/>
+		</div>
+	</div>
+	
 	<div id="about" class="about">
 		<img style="position:absolute; ;top: 0px;right: 0px;" width="300px" alt="Cross Lee" src="./image/user.png">
 		<div class="profile_items">

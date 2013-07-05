@@ -32,6 +32,11 @@
 	cursor: pointer;
 }
 
+.menu a{
+	text-decoration:none; 
+	color: #222;
+}
+
 .frame{
 	width: 100%;
 	height: 100%;
@@ -85,10 +90,11 @@ Home.photos = function(){
 	alert("Under Construction, coming soon..");
 };
 Home.weibo = function(){
-	alert("Under Construction, coming soon..");
+	Home.hideAll();
+	$("#iframe").contents().find("#weibo").show();
 };
 Home.github = function(){
-	alert("Under Construction, coming soon..");
+	window.location.href = "https://github.com/CrossLee";
 };
 Home.about = function(){
 	Home.hideAll();
@@ -105,11 +111,11 @@ Home.about = function(){
 			<a title="CROSS'S WEB" href="http://cross.withiter.com">CROSS'S WEB</a>
 		</h1>
 		<h2 id="site-description"> Here's my website :) </h2>
-		<div class="menu" onclick="Home.home();">Home</div>
-		<div class="menu" onclick="Home.photos();">PhotoS</div>
-		<div class="menu" onclick="Home.weibo();">WeiBo</div>
-		<div class="menu" onclick="Home.github();">GitHub</div>
-		<div class="menu" onclick="Home.about();">About</div>
+		<div class="menu"><a href="javascript:Home.home();">Home</a></div>
+		<div class="menu"><a href="javascript:Home.photos();">Photo</a></div>
+		<div class="menu"><a href="javascript:Home.weibo();">WeiBo</a></div>
+		<div class="menu"><a href="javascript:Home.github();">GitHub</a></div>
+		<div class="menu"><a href="javascript:Home.about();">About</a></div>
 	</div>
 </body>
 </html>
