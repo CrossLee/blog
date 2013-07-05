@@ -12,10 +12,10 @@ body {
 	min-height: 100%;
 }
 
-#content {
+.content {
 	width: 700px;
 	position: absolute;
-	left: 40%;
+	left: 34%;
 	top: 60px;
 	min-height: 700px;
 	
@@ -24,8 +24,16 @@ body {
     margin: 0 0 1.625em;
     padding: 0 0 1.625em;
 }
+.about {
+	display:none;
+	width: 700px;
+	position: absolute;
+	left: 34%;
+	top: 60px;
+	min-height: 700px;
+}
 
-#right{
+.right{
 	position: relative;
 	left: 30px;
 	top: 60px;
@@ -35,10 +43,14 @@ body {
 <title>CROSS'S WEBSITE</title>
 </head>
 <body>
-	<div id="content">
-		<div id="right">
+	<div id="content" class="content">
+		<div class="right">
 			It is coming soon..
 		</div>
+	</div>
+	
+	<div id="about" class="about">
+			It is coming soon..about
 	</div>
 </body>
 </html>

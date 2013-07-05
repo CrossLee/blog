@@ -17,7 +17,7 @@
 .left {
 	width: 300px;
 	position: absolute;
-	left: 10%;
+	left: 7%;
 	top: 30px;
 	text-align: right;
 }
@@ -65,8 +65,19 @@
 }
 </style>
 
+<script src="./js/jquery-1.7.js" type="text/javascript" charset="utf-8" ></script>
 <script type="text/javascript">
 Home = {};
+
+Home.hideAll = function(){
+	$("#iframe").contents().find("#content").hide();
+	$("#iframe").contents().find("#photos").hide();
+	$("#iframe").contents().find("#weibo").hide();
+	$("#iframe").contents().find("#github").hide();
+	$("#iframe").contents().find("#about").hide();
+	
+};
+
 Home.home = function(){
 	window.location.href = "./home.jsp";
 };
@@ -80,14 +91,15 @@ Home.github = function(){
 	alert("Under Construction, coming soon..");
 };
 Home.about = function(){
-	alert("Under Construction, coming soon..");
+	Home.hideAll();
+	$("#iframe").contents().find("#about").show();
 };
 </script>
 
 <title>CROSS'S WEBSITE</title>
 </head>
 <body class="bodyclass">
-	<iframe class="frame" src="index.jsp"></iframe>
+	<iframe id="iframe" class="frame" src="index.jsp"></iframe>
 	<div class="left">
 		<h1 id="site-title">
 			<a title="CROSS'S WEB" href="http://cross.withiter.com">CROSS'S WEB</a>
