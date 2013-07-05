@@ -82,7 +82,7 @@ body {
 		<div class="profile_items_long">
 			<font>Sina Weibo ： <a href="http://weibo.com/withiter" target="_blank"><img class="link_image" alt="GitHub" src="./image/weibo.png"></a></font>
 			<hr/>
-			<font>Twitter ： <a href="#" target="_blank"><img class="link_image" alt="GitHub" src="./image/twitter.png"></a></font>
+			<font>Twitter ： <a href="https://twitter.com/Withiter" target="_blank"><img class="link_image" alt="GitHub" src="./image/twitter.png"></a></font>
 			<br/>
 		</div>
 	</div>
@@ -117,8 +117,8 @@ body {
 			<hr/>
 			<font class="key">
 				<a href="https://github.com/CrossLee" target="_blank"><img class="link_image" alt="GitHub" src="./image/github.png"></a>
-				<a href="" target="_blank"><img class="link_image" alt="GitHub" src="./image/twitter.png"></a>
-				<a href="" target="_blank"><img class="link_image" alt="GitHub" src="./image/facebook.png"></a>
+				<a href="https://twitter.com/Withiter" target="_blank"><img class="link_image" alt="GitHub" src="./image/twitter.png"></a>
+				<a href="https://www.facebook.com/cross.lee.58" target="_blank"><img class="link_image" alt="GitHub" src="./image/facebook.png"></a>
 				<a href="http://weibo.com/withiter" target="_blank"><img class="link_image" alt="GitHub" src="./image/weibo.png"></a>
 			</font><br/>
 		</div>
