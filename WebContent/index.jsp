@@ -53,7 +53,7 @@ body {
 .profile_items {
 	position: relative;
 	width: 420px;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
 
 .profile_items_long {
@@ -66,6 +66,10 @@ body {
 	width: 26px;
 	height: 26px;
 	margin-right: 30px;
+}
+
+.about_title{
+	font-weight: bolder;
 }
 
 </style>
@@ -90,21 +94,21 @@ body {
 	<div id="about" class="about">
 		<img style="position:absolute; ;top: 0px;right: 0px;" width="240px" height="300px;" alt="Cross Lee" src="./image/me.png">
 		<div class="profile_items">
-			<font>Who Am I</font>
+			<font class="about_title">Who Am I</font>
 			<hr/>
 			<font class="key">I'm Cross. <br/>
 			What does "Cross" mean, <br/>
 			To cover or extend over an area</font><br/>
 		</div>
 		<div class="profile_items">
-			<font>Path</font>
+			<font class="about_title">Path</font>
 			<hr/>
 			<font class="key">
 				In 1987, I was born in Yangzhou, Jiangsu. Graduated from JIT 2006.
 			</font><br/>
 		</div>
 		<div class="profile_items_long">
-			<font>Project</font>
+			<font class="about_title">Project</font>
 			<hr/>
 			<font class="key">
 				Multimedia publishing platform: CPS · CPSMini<br/>
@@ -116,10 +120,19 @@ body {
 			<font>Link</font>
 			<hr/>
 			<font class="key">
-				<a href="https://github.com/CrossLee" target="_blank"><img class="link_image" alt="GitHub" src="./image/github.png"></a>
-				<a href="https://twitter.com/Withiter" target="_blank"><img class="link_image" alt="GitHub" src="./image/twitter.png"></a>
-				<a href="https://www.facebook.com/cross.lee.58" target="_blank"><img class="link_image" alt="GitHub" src="./image/facebook.png"></a>
-				<a href="http://weibo.com/withiter" target="_blank"><img class="link_image" alt="GitHub" src="./image/weibo.png"></a>
+				<a href="https://github.com/CrossLee" target="_blank"><img align="top" class="link_image" alt="GitHub" src="./image/github.png"></a>
+				<a href="https://twitter.com/Withiter" target="_blank"><img align="top" class="link_image" alt="Twitter" src="./image/twitter.png"></a>
+				<a href="https://www.facebook.com/cross.lee.58" target="_blank"><img align="top" class="link_image" alt="Facebook" src="./image/facebook.png"></a>
+				<a href="http://weibo.com/withiter" target="_blank"><img align="top" class="link_image" alt="Sina Weibo" src="./image/weibo.png"></a>
+				<a href="http://weibo.com/withiter" target="_blank"><img align="bottom" class="link_image" style="width: 20px;height: 18px;margin-top: 3px" alt="CSDN Blog" src="./image/blogger.png"></a>
+			</font><br/>
+		</div>
+		<div class="profile_items_long">
+			<font class="about_title">Contact</font>
+			<hr/>
+			<font class="key">
+				Mail: mag_lee@126.com<br/>
+				QQ: 343642038<br/>
 			</font><br/>
 		</div>
 	</div>
