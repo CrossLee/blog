@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./js/jquery-1.7.js" type="text/javascript" charset="utf-8" ></script>
 <style type="text/css">
 body {
 	background-image: url('./image/bg.png');
@@ -62,59 +63,80 @@ body {
 	margin-bottom: 40px;
 }
 
-.link_image{
+.link_image {
 	width: 26px;
 	height: 26px;
 	margin-right: 30px;
 }
 
-.about_title{
+.about_title {
 	font-weight: bolder;
 }
-
 </style>
+
+<script type="text/javascript">
+$.ajax({
+	type: "POST",
+	url: "/blog/Home",
+	dataType:"json",
+	async: false,
+	success: function(data){
+		alert(data);
+	},
+	error:function(){
+		alert("设备列表获取失败");
+	}
+});
+</script>
+
 <title>CROSS'S WEBSITE</title>
 </head>
 <body>
 	<div id="content" class="content">
 		<div class="right">
 			It is coming soon..
+			<form action="/blog/AddArticle" method="post">
+				title:<input name="title" /> content:<input name="content" /> tag:<input
+					name="tag" /> <input type="submit">
+			</form>
 		</div>
 	</div>
-	
+
 	<div id="weibo" class="about">
 		<div class="profile_items_long">
-			<font>Sina Weibo ： <a href="http://weibo.com/withiter" target="_blank"><img class="link_image" alt="GitHub" src="./image/weibo.png"></a></font>
-			<hr/>
-			<font>Twitter ： <a href="https://twitter.com/Withiter" target="_blank"><img class="link_image" alt="GitHub" src="./image/twitter.png"></a></font>
-			<br/>
+			<font>Sina Weibo ： <a href="http://weibo.com/withiter"
+				target="_blank"><img class="link_image" alt="GitHub"
+					src="./image/weibo.png"></a></font>
+			<hr />
+			<font>Twitter ： <a href="https://twitter.com/Withiter"
+				target="_blank"><img class="link_image" alt="GitHub"
+					src="./image/twitter.png"></a></font> <br />
 		</div>
 	</div>
-	
+
 	<div id="about" class="about">
-		<img style="position:absolute; ;top: 0px;right: 0px;" width="240px" height="300px;" alt="Cross Lee" src="./image/me.png">
+		<img style="position: absolute;; top: 0px; right: 0px;" width="240px"
+			height="300px;" alt="Cross Lee" src="./image/me.png">
 		<div class="profile_items">
 			<font class="about_title">Who Am I</font>
-			<hr/>
-			<font class="key">I'm Cross. <br/>
-			What does "Cross" mean, <br/>
-			To cover or extend over an area</font><br/>
+			<hr />
+			<font class="key">I'm Cross. <br /> What does "Cross" mean, <br />
+				To cover or extend over an area
+			</font><br />
 		</div>
 		<div class="profile_items">
 			<font class="about_title">Path</font>
-			<hr/>
-			<font class="key">
-				In 1987, I was born in Yangzhou, Jiangsu. Graduated from JIT 2006.
-			</font><br/>
+			<hr />
+			<font class="key"> In 1987, I was born in Yangzhou, Jiangsu.
+				Graduated from JIT 2006. </font><br />
 		</div>
 		<div class="profile_items_long">
 			<font class="about_title">Project</font>
-			<hr/>
-			<font class="key">
-				Multimedia publishing platform: CPS · CPSMini<br/>
-				WEBDIY: Intepub · IntepubWeb<br/>
-				Website: CROSS'S WEB
-			</font><br/>
+			<hr />
+			<font class="key"> Multimedia publishing platform: CPS ·
+				CPSMini<br /> WEBDIY: Intepub · IntepubWeb<br /> Website: CROSS'S
+				WEB
+			</font><br />
 		</div>
 		<div class="profile_items_long">
 			<font>Link</font>
