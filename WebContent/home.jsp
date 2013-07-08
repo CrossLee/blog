@@ -17,7 +17,7 @@
 .left {
 	width: 300px;
 	position: absolute;
-	left: 10%;
+	left: 7%;
 	top: 30px;
 	text-align: right;
 }
@@ -30,6 +30,11 @@
 	color: #222;
 	text-shadow: 0px 2px 3px #555;
 	cursor: pointer;
+}
+
+.menu a{
+	text-decoration:none; 
+	color: #222;
 }
 
 .frame{
@@ -65,39 +70,52 @@
 }
 </style>
 
+<script src="./js/jquery-1.7.js" type="text/javascript" charset="utf-8" ></script>
 <script type="text/javascript">
 Home = {};
+
+Home.hideAll = function(){
+	$("#iframe").contents().find("#content").hide();
+	$("#iframe").contents().find("#photos").hide();
+	$("#iframe").contents().find("#weibo").hide();
+	$("#iframe").contents().find("#github").hide();
+	$("#iframe").contents().find("#about").hide();
+	
+};
+
 Home.home = function(){
-	window.location.href = "./home.jsp";
+	window.location.href = "http://cross.withiter.com";
 };
 Home.photos = function(){
 	alert("Under Construction, coming soon..");
 };
 Home.weibo = function(){
-	alert("Under Construction, coming soon..");
+	Home.hideAll();
+	$("#iframe").contents().find("#weibo").show();
 };
 Home.github = function(){
-	alert("Under Construction, coming soon..");
+	window.location.href = "https://github.com/CrossLee";
 };
 Home.about = function(){
-	alert("Under Construction, coming soon..");
+	Home.hideAll();
+	$("#iframe").contents().find("#about").show();
 };
 </script>
 
 <title>CROSS'S WEBSITE</title>
 </head>
 <body class="bodyclass">
-	<iframe class="frame" src="index.jsp"></iframe>
+	<iframe id="iframe" class="frame" src="index.jsp"></iframe>
 	<div class="left">
 		<h1 id="site-title">
 			<a title="CROSS'S WEB" href="http://cross.withiter.com">CROSS'S WEB</a>
 		</h1>
 		<h2 id="site-description"> Here's my website :) </h2>
-		<div class="menu" onclick="Home.home();">Home</div>
-		<div class="menu" onclick="Home.photos();">PhotoS</div>
-		<div class="menu" onclick="Home.weibo();">WeiBo</div>
-		<div class="menu" onclick="Home.github();">GitHub</div>
-		<div class="menu" onclick="Home.about();">About</div>
+		<div class="menu"><a href="javascript:Home.home();">Home</a></div>
+		<div class="menu"><a href="javascript:Home.photos();">Photo</a></div>
+		<div class="menu"><a href="javascript:Home.weibo();">WeiBo</a></div>
+		<div class="menu"><a href="javascript:Home.github();">GitHub</a></div>
+		<div class="menu"><a href="javascript:Home.about();">About</a></div>
 	</div>
 </body>
 </html>
