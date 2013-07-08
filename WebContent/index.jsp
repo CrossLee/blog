@@ -124,7 +124,7 @@ body {
 				<a href="https://twitter.com/Withiter" target="_blank"><img align="top" class="link_image" alt="Twitter" src="./image/twitter.png"></a>
 				<a href="https://www.facebook.com/cross.lee.58" target="_blank"><img align="top" class="link_image" alt="Facebook" src="./image/facebook.png"></a>
 				<a href="http://weibo.com/withiter" target="_blank"><img align="top" class="link_image" alt="Sina Weibo" src="./image/weibo.png"></a>
-				<a href="http://weibo.com/withiter" target="_blank"><img align="bottom" class="link_image" style="width: 20px;height: 18px;margin-top: 3px" alt="CSDN Blog" src="./image/blogger.png"></a>
+				<a href="http://blog.csdn.net/huxiweng" target="_blank"><img align="bottom" class="link_image" style="width: 20px;height: 18px;margin-top: 3px" alt="CSDN Blog" src="./image/blogger.png"></a>
 			</font><br/>
 		</div>
 		<div class="profile_items_long">
