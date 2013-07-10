@@ -78,20 +78,23 @@ body {
 }
 
 .title{
-	font-size: large;
+	font-size: x-large;
 	font: bold;
+	margin-bottom: 8px;
 }
 
 .date{
 	font-size: small;
 	font: normal;
 	color: gray;
+	margin-bottom: 8px;
 }
 
 .tag{
 	font-size: small;
 	font: normal;
 	color: gray;
+	margin-bottom: 20px;
 }
 
 .content{
@@ -106,10 +109,14 @@ body {
 	<div id="content" class="right_content">
 		<div class="right">
 			<form action="/blog/AddArticle" method="post">
-				title:<input name="title" /> content:<input name="content" /> tag:<input
-					name="tag" /> <input type="submit">
+				<table>
+					<tr><td>title:</td><td><input size="40" style="width: 496px;" name="title" /></td></tr>
+					<tr><td>tags:</td><td><input size="40" style="width: 496px;" name="tag" /></td></tr>
+					<tr><td>content:</td><td><textarea style="width: 500px; font-size:12px;" name="content" cols="40" rows="20"></textarea></td></tr>
+					<tr><td colspan="2"><input type="submit" value="Submit"></td></tr>
+				</table>
+				
 			</form>
-			<!-- 
 			It is coming soon..It is coming soon..It is coming soon..It is co ming soon..It is coming soon..It is coming soon..It is coming soon..It is coming soon..It is coming soon..<br/>
 			It is coming soon..<br/>
 			It is coming soon..<br/>
@@ -168,7 +175,6 @@ body {
 			It is coming soon..<br/>
 			It is coming soon..<br/>
 			It is coming soon..<br/>
-			 -->
 		</div>
 	</div>
 	
@@ -248,9 +254,16 @@ body {
 		dataType : "json",
 		async : false,
 		success : function(data) {
-			$.each(data.articleVO, function(i, item){
-				buildArticle(item);
-			});
+			
+			if(data!=null){
+				if(data.articleVO.title != null){
+					buildArticle(data.articleVO);
+				}else{
+					$.each(data.articleVO, function(i, item){
+						buildArticle(item);
+					});
+				}
+			}
 		},
 		error : function() {
 			alert("error!");
@@ -265,16 +278,20 @@ body {
 		$(articleDiv).addClass("right");
 		
 		var titleDiv = document.createElement("div");
-		$(titleDiv).text(item.title).addClass("title");
+		$(titleDiv).text(item.title);
+		$(titleDiv).addClass("title");
 		
 		var dateDiv = document.createElement("div");
-		$(dateDiv).text(item.date).addClass("date");
+		$(dateDiv).text("Posted on "+item.date);
+		$(dateDiv).addClass("date");
 		
 		var tagDiv = document.createElement("div");
-		$(tagDiv).text(item.tag).addClass("tag");
+		$(tagDiv).text("Tags "+item.tag);
+		$(tagDiv).addClass("tag");
 		
 		var contentDiv = document.createElement("div");
-		$(contentDiv).text(item.content).addClass("content");
+		$(contentDiv).text(item.content);
+		$(contentDiv).addClass("content");
 		
 		articleDiv.appendChild(titleDiv);
 		articleDiv.appendChild(dateDiv);

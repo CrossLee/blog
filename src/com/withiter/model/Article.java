@@ -9,6 +9,7 @@ import java.util.List;
 import com.google.code.morphia.annotations.Entity;
 import com.google.code.morphia.annotations.Id;
 import com.google.code.morphia.annotations.Property;
+import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
@@ -54,7 +55,7 @@ public class Article {
 			mg = new Mongo();
 			DB db = mg.getDB(Configuration.DB_NAME);
 			DBCollection article = db.getCollection("Article");
-			DBCursor cur = article.find().limit(5);
+			DBCursor cur = article.find().limit(5).sort(new BasicDBObject("id",1));
 			List<DBObject> objects = cur.toArray();
 			Article a = null;
 			for(DBObject object : objects){

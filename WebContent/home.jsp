@@ -105,7 +105,7 @@ Home.about = function(){
 <title>CROSS'S WEBSITE</title>
 </head>
 <body class="bodyclass">
-	<iframe id="iframe" class="frame" src="index.jsp"></iframe>
+	<iframe id="iframe" class="frame" src="right.jsp"></iframe>
 	<div class="left">
 		<h1 id="site-title">
 			<a title="CROSS'S WEB" href="http://cross.withiter.com">CROSS'S WEB</a>
