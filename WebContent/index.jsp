@@ -105,6 +105,10 @@ body {
 <body>
 	<div id="content" class="right_content">
 		<div class="right">
+			<form action="/blog/AddArticle" method="post">
+				title:<input name="title" /> content:<input name="content" /> tag:<input
+					name="tag" /> <input type="submit">
+			</form>
 			<!-- 
 			It is coming soon..It is coming soon..It is coming soon..It is co ming soon..It is coming soon..It is coming soon..It is coming soon..It is coming soon..It is coming soon..<br/>
 			It is coming soon..<br/>
@@ -165,10 +169,6 @@ body {
 			It is coming soon..<br/>
 			It is coming soon..<br/>
 			 -->
-			<form action="/blog/AddArticle" method="post">
-				title:<input name="title" /> content:<input name="content" /> tag:<input
-					name="tag" /> <input type="submit">
-			</form>
 		</div>
 	</div>
 	
