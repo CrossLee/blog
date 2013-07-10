@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script src="./js/jquery-1.7.js" type="text/javascript" charset="utf-8" ></script>
+<script src="./js/jquery-1.7.js" type="text/javascript" charset="utf-8"></script>
 <style type="text/css">
 body {
 	background-image: url('./image/bg.png');
@@ -13,16 +13,19 @@ body {
 	min-height: 100%;
 }
 
-.content {
+.right_content {
 	width: 700px;
-	position: absolute;
+	position: relative;
 	left: 34%;
 	top: 60px;
-	min-height: 700px;
+	float:left;
+	display:inline-block;
+	min-height: 300px;
 	background: none repeat scroll 0 0 white;
 	box-shadow: 0 0 10px rgba(200, 200, 200, 0.8);
 	margin: 0 0 1.625em;
 	padding: 0 0 1.625em;
+	padding-bottom: 100px;
 }
 
 .about {
@@ -42,8 +45,9 @@ body {
 
 .right {
 	position: relative;
-	left: 30px;
+	left: 40px;
 	top: 60px;
+	width: 620px;
 }
 
 .key {
@@ -72,35 +76,103 @@ body {
 .about_title {
 	font-weight: bolder;
 }
-</style>
 
-<script type="text/javascript">
-$.ajax({
-	type: "POST",
-	url: "/blog/Home",
-	dataType:"json",
-	async: false,
-	success: function(data){
-		alert(data);
-	},
-	error:function(){
-		alert("设备列表获取失败");
-	}
-});
-</script>
+.title{
+	font-size: large;
+	font: bold;
+}
+
+.date{
+	font-size: small;
+	font: normal;
+	color: gray;
+}
+
+.tag{
+	font-size: small;
+	font: normal;
+	color: gray;
+}
+
+.content{
+	
+}
+
+</style>
 
 <title>CROSS'S WEBSITE</title>
 </head>
 <body>
-	<div id="content" class="content">
+	<div id="content" class="right_content">
 		<div class="right">
-			It is coming soon..
+			<!-- 
+			It is coming soon..It is coming soon..It is coming soon..It is co ming soon..It is coming soon..It is coming soon..It is coming soon..It is coming soon..It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			It is coming soon..<br/>
+			 -->
 			<form action="/blog/AddArticle" method="post">
 				title:<input name="title" /> content:<input name="content" /> tag:<input
 					name="tag" /> <input type="submit">
 			</form>
 		</div>
 	</div>
+	
+	<div style="display: none;" id="break_line"></div>
 
 	<div id="weibo" class="about">
 		<div class="profile_items_long">
@@ -140,23 +212,76 @@ $.ajax({
 		</div>
 		<div class="profile_items_long">
 			<font>Link</font>
-			<hr/>
-			<font class="key">
-				<a href="https://github.com/CrossLee" target="_blank"><img align="top" class="link_image" alt="GitHub" src="./image/github.png"></a>
-				<a href="https://twitter.com/Withiter" target="_blank"><img align="top" class="link_image" alt="Twitter" src="./image/twitter.png"></a>
-				<a href="https://www.facebook.com/cross.lee.58" target="_blank"><img align="top" class="link_image" alt="Facebook" src="./image/facebook.png"></a>
-				<a href="http://weibo.com/withiter" target="_blank"><img align="top" class="link_image" alt="Sina Weibo" src="./image/weibo.png"></a>
-				<a href="http://blog.csdn.net/huxiweng" target="_blank"><img align="bottom" class="link_image" style="width: 20px;height: 18px;margin-top: 3px" alt="CSDN Blog" src="./image/blogger.png"></a>
-			</font><br/>
+			<hr />
+			<font class="key"> <a href="https://github.com/CrossLee"
+				target="_blank"><img align="top" class="link_image" alt="GitHub"
+					src="./image/github.png"></a> <a
+				href="https://twitter.com/Withiter" target="_blank"><img
+					align="top" class="link_image" alt="Twitter"
+					src="./image/twitter.png"></a> <a
+				href="https://www.facebook.com/cross.lee.58" target="_blank"><img
+					align="top" class="link_image" alt="Facebook"
+					src="./image/facebook.png"></a> <a
+				href="http://weibo.com/withiter" target="_blank"><img
+					align="top" class="link_image" alt="Sina Weibo"
+					src="./image/weibo.png"></a> <a
+				href="http://blog.csdn.net/huxiweng" target="_blank"><img
+					align="bottom" class="link_image"
+					style="width: 20px; height: 18px; margin-top: 3px" alt="CSDN Blog"
+					src="./image/blogger.png"></a>
+			</font><br />
 		</div>
 		<div class="profile_items_long">
 			<font class="about_title">Contact</font>
-			<hr/>
-			<font class="key">
-				Mail: mag_lee@126.com<br/>
-				QQ: 343642038<br/>
-			</font><br/>
+			<hr />
+			<font class="key"> Mail: mag_lee@126.com<br /> QQ: 343642038<br />
+			</font><br />
 		</div>
 	</div>
 </body>
 </html>
+
+<script type="text/javascript">
+	$.ajax({
+		type : "POST",
+		url : "/blog/services/root/loadArticles",
+		dataType : "json",
+		async : false,
+		success : function(data) {
+			$.each(data.articleVO, function(i, item){
+				buildArticle(item);
+			});
+		},
+		error : function() {
+			alert("error!");
+		}
+	});
+	
+	function buildArticle(item){
+		var cotentDiv = document.createElement("div");
+		$(cotentDiv).addClass("right_content");
+		
+		var articleDiv = document.createElement("div");
+		$(articleDiv).addClass("right");
+		
+		var titleDiv = document.createElement("div");
+		$(titleDiv).text(item.title).addClass("title");
+		
+		var dateDiv = document.createElement("div");
+		$(dateDiv).text(item.date).addClass("date");
+		
+		var tagDiv = document.createElement("div");
+		$(tagDiv).text(item.tag).addClass("tag");
+		
+		var contentDiv = document.createElement("div");
+		$(contentDiv).text(item.content).addClass("content");
+		
+		articleDiv.appendChild(titleDiv);
+		articleDiv.appendChild(dateDiv);
+		articleDiv.appendChild(tagDiv);
+		articleDiv.appendChild(contentDiv);
+		$(cotentDiv).append(articleDiv);
+		
+		$("#break_line").before(cotentDiv);
+	}
+</script>

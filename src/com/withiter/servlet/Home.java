@@ -41,6 +41,7 @@ public class Home extends HttpServlet {
 		out.close();
 		// request.getRequestDispatcher("/home.jsp").forward(request, response);
 		// response.sendRedirect("/blog/home.jsp");
+		
 	}
 
 	/**

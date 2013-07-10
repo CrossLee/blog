@@ -32,6 +32,11 @@ public class Article {
 	@Property
 	public String tag;
 
+	public Article() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public Article(String id, String date, String title, String content,
 			String tag) {
 		super();

@@ -75,7 +75,7 @@
 Home = {};
 
 Home.hideAll = function(){
-	$("#iframe").contents().find("#content").hide();
+	$("#iframe").contents().find("[div.class = 'right_content']").hide();
 	$("#iframe").contents().find("#photos").hide();
 	$("#iframe").contents().find("#weibo").hide();
 	$("#iframe").contents().find("#github").hide();
