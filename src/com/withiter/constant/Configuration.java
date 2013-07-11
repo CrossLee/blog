@@ -4,4 +4,9 @@ public class Configuration {
 
 	public static String DB_SEEDS = "127.0.0.1:27017";
 	public static String DB_NAME = "blog";
+	public static String PASSWORD = "";
+	
+	public static String getPassowrd(){
+		return PASSWORD;
+	}
 }

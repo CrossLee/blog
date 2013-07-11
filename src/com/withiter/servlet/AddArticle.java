@@ -47,5 +47,6 @@ public class AddArticle extends HttpServlet {
 		
 		Article article = new Article(id,date,title,content,tag);
 		article.save();
+		response.sendRedirect("/blog");
 	}
 }

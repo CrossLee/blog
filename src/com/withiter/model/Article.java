@@ -55,7 +55,7 @@ public class Article {
 			mg = new Mongo();
 			DB db = mg.getDB(Configuration.DB_NAME);
 			DBCollection article = db.getCollection("Article");
-			DBCursor cur = article.find().limit(5).sort(new BasicDBObject("id",1));
+			DBCursor cur = article.find().limit(5).sort(new BasicDBObject("date",-1));
 			List<DBObject> objects = cur.toArray();
 			Article a = null;
 			for(DBObject object : objects){

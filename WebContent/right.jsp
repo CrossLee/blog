@@ -21,7 +21,7 @@ body {
 	float:left;
 	display:inline-block;
 	min-height: 300px;
-	background: none repeat scroll 0 0 white;
+	/*background: none repeat scroll 0 0 white;*/
 	box-shadow: 0 0 10px rgba(200, 200, 200, 0.8);
 	margin: 0 0 1.625em;
 	padding: 0 0 1.625em;
@@ -101,83 +101,22 @@ body {
 	
 }
 
+.right_button{
+	margin-bottom: 30px;
+	text-decoration:none;
+	font-size: 30px;
+	font-weight: normal;
+	text-align: right;
+	color: #222;
+	text-shadow: 0px 2px 3px #555;
+	cursor: pointer;
+}
+
 </style>
 
 <title>CROSS'S WEBSITE</title>
 </head>
-<body>
-	<div id="content" class="right_content">
-		<div class="right">
-			<form action="/blog/AddArticle" method="post">
-				<table>
-					<tr><td>title:</td><td><input size="40" style="width: 496px;" name="title" /></td></tr>
-					<tr><td>tags:</td><td><input size="40" style="width: 496px;" name="tag" /></td></tr>
-					<tr><td>content:</td><td><textarea style="width: 500px; font-size:12px;" name="content" cols="40" rows="20"></textarea></td></tr>
-					<tr><td colspan="2"><input type="submit" value="Submit"></td></tr>
-				</table>
-				
-			</form>
-			It is coming soon..It is coming soon..It is coming soon..It is co ming soon..It is coming soon..It is coming soon..It is coming soon..It is coming soon..It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-			It is coming soon..<br/>
-		</div>
-	</div>
-	
+<body id="body">
 	<div style="display: none;" id="break_line"></div>
 
 	<div id="weibo" class="about">
@@ -244,6 +183,11 @@ body {
 			</font><br />
 		</div>
 	</div>
+	<div id="admin" class="about">
+		<div class="profile_items_long">
+			<font>Password ： <input type="password" id="password" value="" /> <a class="right_button" href="javascript:void(0);" onclick="javascript:validate();">Submit</a></font>
+		</div>
+	</div>
 </body>
 </html>
 
@@ -300,5 +244,27 @@ body {
 		$(cotentDiv).append(articleDiv);
 		
 		$("#break_line").before(cotentDiv);
+	}
+	
+	function validate(){
+		var password = $("#password").val();
+		$.ajax({
+			type : "POST",
+			data : {"password" : password},
+			url : "/blog/services/root/validate",
+			dataType : "html",
+			async : false,
+			success : function(data) {
+				if(data != "false"){
+					$("#admin").hide();
+					$("#body").append(data);
+				}else{
+					alert("If you try again with wrong password, you will be traced...");
+				}
+			},
+			error : function() {
+				alert("error!");
+			}
+		});
 	}
 </script>

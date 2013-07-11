@@ -1,43 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-	id="WebApp_ID" version="2.5">
-	<display-name>Crossblog</display-name>
-	<welcome-file-list>
-		<welcome-file>/home.jsp</welcome-file>
-	</welcome-file-list>
-	<servlet>
-		<description></description>
-		<display-name>AddArticle</display-name>
-		<servlet-name>AddArticle</servlet-name>
-		<servlet-class>com.withiter.servlet.AddArticle</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>AddArticle</servlet-name>
-		<url-pattern>/AddArticle</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<description></description>
-		<display-name>Home</display-name>
-		<servlet-name>Home</servlet-name>
-		<servlet-class>com.withiter.servlet.Home</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>Home</servlet-name>
-		<url-pattern>/Home</url-pattern>
-	</servlet-mapping>
-
-	<!-- restful service -->
-	<servlet>
-		<servlet-name>JerseyServlet</servlet-name>
-		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
-		<load-on-startup>2</load-on-startup>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>JerseyServlet</servlet-name>
-		<url-pattern>/services/*</url-pattern>
-	</servlet-mapping>
-	<!-- restful service -->
-
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Crossblog</display-name>
+  <welcome-file-list>
+    <welcome-file>/home.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>AddArticle</display-name>
+    <servlet-name>AddArticle</servlet-name>
+    <servlet-class>com.withiter.servlet.AddArticle</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddArticle</servlet-name>
+    <url-pattern>/AddArticle</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Home</display-name>
+    <servlet-name>Home</servlet-name>
+    <servlet-class>com.withiter.servlet.Home</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Home</servlet-name>
+    <url-pattern>/Home</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>JerseyServlet</servlet-name>
+    <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JerseyServlet</servlet-name>
+    <url-pattern>/services/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Init</display-name>
+    <servlet-name>Init</servlet-name>
+    <servlet-class>com.withiter.servlet.Init</servlet-class>
+    <init-param>
+      <param-name>password</param-name>
+      <param-value>ilovedanny</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Init</servlet-name>
+    <url-pattern>/Init</url-pattern>
+  </servlet-mapping>
 </web-app>

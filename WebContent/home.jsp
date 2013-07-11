@@ -100,6 +100,35 @@ Home.about = function(){
 	Home.hideAll();
 	$("#iframe").contents().find("#about").show();
 };
+Home.admin = function(){
+	Home.hideAll();
+	$("#iframe").contents().find("#admin").show();
+	
+	/*
+	$.ajax({
+		type : "POST",
+		url : "/blog/services/root/loadArticles",
+		dataType : "json",
+		async : false,
+		success : function(data) {
+			
+			if(data!=null){
+				if(data.articleVO.title != null){
+					buildArticle(data.articleVO);
+				}else{
+					$.each(data.articleVO, function(i, item){
+						buildArticle(item);
+					});
+				}
+			}
+		},
+		error : function() {
+			alert("error!");
+		}
+	});
+	$("#iframe").contents().find("#about").show();
+	*/
+};
 </script>
 
 <title>CROSS'S WEBSITE</title>
@@ -116,6 +145,7 @@ Home.about = function(){
 		<div class="menu"><a href="javascript:Home.weibo();">WeiBo</a></div>
 		<div class="menu"><a href="javascript:Home.github();">GitHub</a></div>
 		<div class="menu"><a href="javascript:Home.about();">About</a></div>
+		<div class="menu"><a href="javascript:Home.admin();">Admin</a></div>
 	</div>
 </body>
 </html>
