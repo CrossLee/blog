@@ -1,5 +1,7 @@
 Right = {};
 
+Right.FAIL_TIMES = 0;
+
 Right.init = function(){
 	$.ajax({
 		type : "POST",
@@ -68,7 +70,27 @@ Right.validate = function(){
 				$("#admin").hide();
 				$("#body").append(data);
 			}else{
-				alert("If you try again with wrong password, you will be traced...");
+				Right.FAIL_TIMES ++;
+				if(Right.FAIL_TIMES == 1){
+					alert("If you try again with wrong password, you will be traced...");
+				}
+				if(Right.FAIL_TIMES == 2){
+					alert("Your IP Address are traced..Next step, I will get your location!");
+				}
+				/*
+				if(Right.FAIL_TIMES == 3){
+					alert("You come from");
+				}
+				*/
+				if(Right.FAIL_TIMES == 3){
+					alert("Run away now!!! otherwise I will catch you in 30 minutes!");
+				}
+				if(Right.FAIL_TIMES == 4){
+					alert("I am on the way now...");
+				}
+				if(Right.FAIL_TIMES == 5){
+					alert("OK.. you win, I am dead, will not response you...");
+				}
 			}
 		},
 		error : function() {
