@@ -5,114 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script src="./js/jquery-1.7.js" type="text/javascript" charset="utf-8"></script>
-<style type="text/css">
-body {
-	background-image: url('./image/bg.png');
-	background-repeat: repeat;
-	background-attachment: fixed;
-	min-height: 100%;
-}
-
-.right_content {
-	width: 700px;
-	position: relative;
-	left: 34%;
-	top: 60px;
-	float:left;
-	display:inline-block;
-	min-height: 300px;
-	/*background: none repeat scroll 0 0 white;*/
-	box-shadow: 0 0 10px rgba(200, 200, 200, 0.8);
-	margin: 0 0 1.625em;
-	padding: 0 0 1.625em;
-	padding-bottom: 100px;
-}
-
-.about {
-	display: none;
-	width: 700px;
-	position: absolute;
-	left: 34%;
-	top: 60px;
-	min-height: 700px;
-	margin-bottom: 30px;
-	font-size: 30px;
-	font-weight: normal;
-	text-align: left;
-	color: #222;
-	text-shadow: 0px 2px 3px #555;
-}
-
-.right {
-	position: relative;
-	left: 40px;
-	top: 60px;
-	width: 620px;
-}
-
-.key {
-	margin-right: 10px;
-	font-size: 20px;
-}
-
-.profile_items {
-	position: relative;
-	width: 420px;
-	margin-bottom: 20px;
-}
-
-.profile_items_long {
-	position: relative;
-	width: 100%;
-	margin-bottom: 40px;
-}
-
-.link_image {
-	width: 26px;
-	height: 26px;
-	margin-right: 30px;
-}
-
-.about_title {
-	font-weight: bolder;
-}
-
-.title{
-	font-size: x-large;
-	font: bold;
-	margin-bottom: 8px;
-}
-
-.date{
-	font-size: small;
-	font: normal;
-	color: gray;
-	margin-bottom: 8px;
-}
-
-.tag{
-	font-size: small;
-	font: normal;
-	color: gray;
-	margin-bottom: 20px;
-}
-
-.content{
-	
-}
-
-.right_button{
-	margin-bottom: 30px;
-	text-decoration:none;
-	font-size: 30px;
-	font-weight: normal;
-	text-align: right;
-	color: #222;
-	text-shadow: 0px 2px 3px #555;
-	cursor: pointer;
-}
-
-</style>
+<script src="./js/right.js" type="text/javascript" charset="utf-8"></script>
+<link href="css/right.css" rel="stylesheet" type="text/css" />
 
 <title>CROSS'S WEBSITE</title>
 </head>
@@ -185,86 +79,12 @@ body {
 	</div>
 	<div id="admin" class="about">
 		<div class="profile_items_long">
-			<font>Password ： <input type="password" id="password" value="" /> <a class="right_button" href="javascript:void(0);" onclick="javascript:validate();">Submit</a></font>
+			<font>Password ： <input type="password" id="password" value="" /> <a class="right_button" href="javascript:void(0);" onclick="javascript:Right.validate();">Submit</a></font>
 		</div>
 	</div>
 </body>
 </html>
 
 <script type="text/javascript">
-	$.ajax({
-		type : "POST",
-		url : "/blog/services/root/loadArticles",
-		dataType : "json",
-		async : false,
-		success : function(data) {
-			
-			if(data!=null){
-				if(data.articleVO.title != null){
-					buildArticle(data.articleVO);
-				}else{
-					$.each(data.articleVO, function(i, item){
-						buildArticle(item);
-					});
-				}
-			}
-		},
-		error : function() {
-			alert("error!");
-		}
-	});
-	
-	function buildArticle(item){
-		var cotentDiv = document.createElement("div");
-		$(cotentDiv).addClass("right_content");
-		
-		var articleDiv = document.createElement("div");
-		$(articleDiv).addClass("right");
-		
-		var titleDiv = document.createElement("div");
-		$(titleDiv).text(item.title);
-		$(titleDiv).addClass("title");
-		
-		var dateDiv = document.createElement("div");
-		$(dateDiv).text("Posted on "+item.date);
-		$(dateDiv).addClass("date");
-		
-		var tagDiv = document.createElement("div");
-		$(tagDiv).text("Tags "+item.tag);
-		$(tagDiv).addClass("tag");
-		
-		var contentDiv = document.createElement("div");
-		$(contentDiv).text(item.content);
-		$(contentDiv).addClass("content");
-		
-		articleDiv.appendChild(titleDiv);
-		articleDiv.appendChild(dateDiv);
-		articleDiv.appendChild(tagDiv);
-		articleDiv.appendChild(contentDiv);
-		$(cotentDiv).append(articleDiv);
-		
-		$("#break_line").before(cotentDiv);
-	}
-	
-	function validate(){
-		var password = $("#password").val();
-		$.ajax({
-			type : "POST",
-			data : {"password" : password},
-			url : "/blog/services/root/validate",
-			dataType : "html",
-			async : false,
-			success : function(data) {
-				if(data != "false"){
-					$("#admin").hide();
-					$("#body").append(data);
-				}else{
-					alert("If you try again with wrong password, you will be traced...");
-				}
-			},
-			error : function() {
-				alert("error!");
-			}
-		});
-	}
+Right.init();
 </script>
