@@ -6,6 +6,7 @@ Home.hideAll = function(){
 	$("#iframe").contents().find("#weibo").hide();
 	$("#iframe").contents().find("#github").hide();
 	$("#iframe").contents().find("#about").hide();
+	$("#iframe").contents().find("#admin").hide();
 	
 };
 
