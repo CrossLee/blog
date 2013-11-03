@@ -39,7 +39,7 @@
 			<font class="about_title">Path</font>
 			<hr />
 			<font class="key"> In 1987, I was born in Yangzhou, Jiangsu.
-				Graduated from JIT 2006. </font><br />
+				Graduated from JIT 2010. </font><br />
 		</div>
 		<div class="profile_items_long">
 			<font class="about_title">Project</font>
